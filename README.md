@@ -212,8 +212,8 @@ Community contributions are the engine that drives this roadmap. Pick up a [Good
 
 | Priority | Item | Status |
 |----------|------|--------|
-| High | DOCX document loader ([#2](https://github.com/adaumsilva/RAG-framework/issues/2)) | Open |
-| High | OpenAI embeddings integration ([#6](https://github.com/adaumsilva/RAG-framework/issues/6)) | Open |
+| High | DOCX document loader ([#2](https://github.com/adaumsilva/RAG-framework/issues/2)) | Done (0.4.0) |
+| High | OpenAI embeddings integration ([#6](https://github.com/adaumsilva/RAG-framework/issues/6)) | Done (0.4.0) |
 | High | PDF document loader ([#1](https://github.com/adaumsilva/RAG-framework/issues/1)) | Done (0.2.0) |
 | High | HuggingFace Sentence Transformers embedder ([#7](https://github.com/adaumsilva/RAG-framework/issues/7)) | Done (0.2.0) |
 | High | OpenAI generator ([#8](https://github.com/adaumsilva/RAG-framework/issues/8)) | Done (0.3.0) |
@@ -224,6 +224,10 @@ Community contributions are the engine that drives this roadmap. Pick up a [Good
 | Medium | Async pipeline support ([#9](https://github.com/adaumsilva/RAG-framework/issues/9)) | Done (0.2.0) |
 | Medium | Optional reranking stage ([#38](https://github.com/adaumsilva/RAG-framework/issues/38)) | Done (0.2.0) |
 | Medium | HTML, CSV and JSONL loaders ([#35](https://github.com/adaumsilva/RAG-framework/issues/35), [#36](https://github.com/adaumsilva/RAG-framework/issues/36)) | Done (0.3.0) |
+| Medium | Directory loader ([#34](https://github.com/adaumsilva/RAG-framework/issues/34)) | Done (0.4.0) |
+| Medium | Token-based chunker ([#44](https://github.com/adaumsilva/RAG-framework/issues/44)) | Done (0.4.0) |
+| Medium | Structured logging ([#41](https://github.com/adaumsilva/RAG-framework/issues/41)) | Done (0.4.0) |
+| Medium | `Retriever.__len__()` and `clear()` ([#46](https://github.com/adaumsilva/RAG-framework/issues/46)) | Done (0.4.0) |
 | Low | Jupyter notebook examples ([#10](https://github.com/adaumsilva/RAG-framework/issues/10)) | Done (0.2.0) |
 
 ---
