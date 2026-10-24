@@ -26,6 +26,14 @@ class StubRetriever(Retriever):
         self.calls.append((query_embedding, top_k, query_text))
         return self.results[:top_k]
 
+    def __len__(self) -> int:
+        return len(self.results)
+
+    def clear(self) -> None:
+        self.results = []
+        self.added.clear()
+        self.calls.clear()
+
 
 def chunk(chunk_id: str) -> Chunk:
     return Chunk(id=chunk_id, content=f"content {chunk_id}")
