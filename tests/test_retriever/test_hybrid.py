@@ -77,9 +77,7 @@ def test_rrf_ranks_chunk_found_by_both_first() -> None:
     dense = StubRetriever([shared, dense_only])
     sparse = StubRetriever([shared, sparse_only])
 
-    results = HybridRetriever(dense, sparse).retrieve(
-        [1.0, 0.0], top_k=3, query_text="shared"
-    )
+    results = HybridRetriever(dense, sparse).retrieve([1.0, 0.0], top_k=3, query_text="shared")
 
     assert [item.id for item in results] == ["shared", "dense-only", "sparse-only"]
 
@@ -99,9 +97,7 @@ def test_duplicate_ids_are_deduplicated() -> None:
     dense = StubRetriever([chunk("same")])
     sparse = StubRetriever([Chunk(id="same", content="different object")])
 
-    results = HybridRetriever(dense, sparse).retrieve(
-        [1.0], top_k=5, query_text="same"
-    )
+    results = HybridRetriever(dense, sparse).retrieve([1.0], top_k=5, query_text="same")
 
     assert len(results) == 1
     assert results[0] is dense.results[0]
@@ -130,9 +126,7 @@ def test_non_positive_top_k_returns_empty_without_querying_children(top_k: int) 
     dense = StubRetriever([chunk("dense")])
     sparse = StubRetriever([chunk("sparse")])
 
-    results = HybridRetriever(dense, sparse).retrieve(
-        [1.0], top_k=top_k, query_text="query"
-    )
+    results = HybridRetriever(dense, sparse).retrieve([1.0], top_k=top_k, query_text="query")
 
     assert results == []
     assert dense.calls == []

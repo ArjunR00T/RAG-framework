@@ -138,13 +138,9 @@ def test_invalid_top_k_raises() -> None:
     retriever = BM25Retriever()
     retriever.add([Chunk(id="1", content="test doc")])
     with pytest.raises(RetrieverError, match="top_k must be an integer"):
-        retriever.retrieve(
-            query_embedding=[0.0], query_text="test", top_k="invalid"
-        )  # type: ignore[arg-type]
+        retriever.retrieve(query_embedding=[0.0], query_text="test", top_k="invalid")  # type: ignore[arg-type]
     with pytest.raises(RetrieverError, match="top_k must be an integer"):
-        retriever.retrieve(
-            query_embedding=[0.0], query_text="test", top_k=True
-        )  # type: ignore[arg-type]
+        retriever.retrieve(query_embedding=[0.0], query_text="test", top_k=True)  # type: ignore[arg-type]
 
 
 def test_non_positive_top_k_returns_empty() -> None:
